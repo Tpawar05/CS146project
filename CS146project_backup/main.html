@@ -1,0 +1,111 @@
+<!-- File: main.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CS 146 Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container" role="main">
+    <aside class="sidebar" aria-label="Tasks">
+        <h3 class="sidebar-title">Tasks</h3>
+
+        <div class="task" tabindex="0">
+            <div>
+                <div class="title">Pay invoices</div>
+                <div class="meta">Due tomorrow</div>
+            </div>
+            <div class="chev">›</div>
+        </div>
+
+        <div class="task" tabindex="0">
+            <div>
+                <div class="title">Design review</div>
+                <div class="meta">In progress</div>
+            </div>
+            <div class="chev">›</div>
+        </div>
+
+        <div class="task" tabindex="0">
+            <div>
+                <div class="title">Plan sprint</div>
+                <div class="meta">No due date</div>
+            </div>
+            <div class="chev">›</div>
+        </div>
+
+        <!-- add more tasks to demonstrate scrolling -->
+        <div class="task" tabindex="0"><div><div class="title">Task 4</div><div class="meta">Later</div></div><div class="chev">›</div></div>
+        <div class="task" tabindex="0"><div><div class="title">Task 5</div><div class="meta">Later</div></div><div class="chev">›</div></div>
+        <div class="task" tabindex="0"><div><div class="title">Task 6</div><div class="meta">Later</div></div><div class="chev">›</div></div>
+    </aside>
+
+    <section class="main" aria-label="Calendar area">
+        <header class="cal-header">
+            <h2 class="month-name">Month 20XX</h2>
+            <div class="controls" aria-hidden="true">
+                <!-- static controls (no JS) -->
+                <button disabled>‹</button>
+                <button disabled>›</button>
+            </div>
+        </header>
+
+        <div class="calendar" id="calendar">
+            <div class="weekday-row" aria-hidden="false">
+                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+            </div>
+
+            <div class="days" id="days" role="grid">
+                <!-- three empty cells (month starts on Wed) -->
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+
+                <!-- days 1..31 -->
+                <div class="day" role="gridcell"><div class="num">1</div></div>
+                <div class="day" role="gridcell"><div class="num">2</div></div>
+                <div class="day" role="gridcell"><div class="num">3</div></div>
+                <div class="day" role="gridcell"><div class="num">4</div></div>
+                <div class="day" role="gridcell"><div class="num">5</div></div>
+                <div class="today" role="gridcell"><div class="num">6</div></div>
+                <div class="day" role="gridcell"><div class="num">7</div></div>
+                <div class="day" role="gridcell"><div class="num">8</div></div>
+                <div class="day" role="gridcell"><div class="num">9</div></div>
+                <div class="day" role="gridcell"><div class="num">10</div></div>
+                <div class="day" role="gridcell"><div class="num">11</div></div>
+                <div class="day" role="gridcell"><div class="num">12</div></div>
+                <div class="day" role="gridcell"><div class="num">13</div></div>
+                <div class="day" role="gridcell"><div class="num">14</div></div>
+                <div class="day" role="gridcell"><div class="num">15</div></div>
+                <div class="day" role="gridcell"><div class="num">16</div></div>
+                <div class="day" role="gridcell"><div class="num">17</div></div>
+                <div class="day" role="gridcell"><div class="num">18</div></div>
+                <div class="day" role="gridcell"><div class="num">19</div></div>
+                <div class="day" role="gridcell"><div class="num">20</div></div>
+                <div class="day" role="gridcell"><div class="num">21</div></div>
+                <div class="day" role="gridcell"><div class="num">22</div></div>
+                <div class="day" role="gridcell"><div class="num">23</div></div>
+                <div class="day" role="gridcell"><div class="num">24</div></div>
+                <div class="day" role="gridcell"><div class="num">25</div></div>
+                <div class="day" role="gridcell"><div class="num">26</div></div>
+                <div class="day" role="gridcell"><div class="num">27</div></div>
+                <div class="day" role="gridcell"><div class="num">28</div></div>
+                <div class="day" role="gridcell"><div class="num">29</div></div>
+                <div class="day" role="gridcell"><div class="num">30</div></div>
+                <div class="day" role="gridcell"><div class="num">31</div></div>
+
+                <!-- fill remaining cells to reach 42 -->
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+                <div class="day empty" role="gridcell"></div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

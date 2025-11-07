@@ -1,0 +1,310 @@
+/* styles.css */
+:root{
+    --bg:#f7f7fb;
+    --card:#fff;
+    --accent:#2b6cb0;
+    --muted:#6b7280;
+}
+html,body{height:100%;}
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    background:var(--bg);
+    display:flex;
+    align-items:stretch;
+    padding:24px;
+    box-sizing:border-box;
+    gap:24px;
+}
+
+/* layout */
+.container{
+    display:flex;
+    gap:24px;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    align-items:stretch; /* ensure children stretch vertically */
+}
+.sidebar{
+    width:280px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    max-height: calc(100vh - 48px); /* account for body padding (24px top + 24px bottom) */
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right:6px; /* give small space for scrollbar so content doesn't hit edge */
+}
+.task{
+    background:var(--card);
+    border-radius:10px;
+    padding:18px 16px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.06);
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:transform .12s ease,box-shadow .12s ease;
+    flex:0 0 auto; /* prevent tasks from stretching when sidebar grows */
+}
+.task{
+    background-color: #ffffff;
+    border-radius:10px;
+    padding:18px 16px;
+    box-shadow:0 1px 3px #ffffff;
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:transform .12s ease,box-shadow .12s ease;
+    flex:0 0 auto; /* prevent tasks from stretching when sidebar grows */
+}
+/*change color for High prio tasks, make more for Mid and any others you may want*/
+.high-task{
+    /*CHANGE "BACKGROUND-COLOUR" to fit task prio*/
+    background-color: #ffffff;
+    border-radius:10px;
+    padding:18px 16px;
+    box-shadow:0 1px 3px #ffffff;
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:transform .12s ease,box-shadow .12s ease;
+    flex:0 0 auto; /* prevent tasks from stretching when sidebar grows */
+}
+
+.main{
+    flex:1;
+    background:var(--card);
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 1px 6px rgba(2,6,23,0.06);
+    border:1px solid rgba(0,0,0,0.04);
+    min-height:520px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.main header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.main h2{ margin:0; font-size:18px; }
+.controls{ display:flex; gap:8px; align-items:center; color:var(--muted); }
+
+/* simple calendar grid */
+.calendar{
+    margin-top:6px;
+    display:grid;
+    grid-template-rows:auto 1fr;
+    gap:12px;
+    flex:1;
+}
+.weekday-row{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:6px;
+    color:var(--muted);
+    font-size:13px;
+}
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
+    align-content:start;
+}
+.today{
+    min-height:72px;
+    background: #48ccff;
+    border-radius:8px;
+    padding:8px;
+    box-sizing:border-box;
+    border:1px solid rgba(0,0,0,0.03);
+    color:#0f172a;
+    font-size:13px;
+}
+.day{
+    min-height:72px;
+    background:linear-gradient(180deg,#ffffff,#fbfdff);
+    border-radius:8px;
+    padding:8px;
+    box-sizing:border-box;
+    border:1px solid rgba(0,0,0,0.03);
+    color:#0f172a;
+    font-size:13px;
+}
+.day .num{ font-weight:700; color:var(--accent); }
+.empty{ background:transparent; border:0; box-shadow:none; }
+
+@media (max-width:800px){
+    body{ padding:16px; }
+    .container{ flex-direction:column; align-items:stretch; }
+    .sidebar{ width:100%; flex-direction:row; overflow:auto; max-height:none; padding-right:0; }
+    .task{ min-width:200px; flex:0 0 auto; }
+}
+
+/* optional light scrollbar styling */
+.sidebar::-webkit-scrollbar{ width:10px; }
+.sidebar::-webkit-scrollbar-thumb{
+    background: rgba(43,108,176,0.12);
+    border-radius:6px;
+}
+.sidebar::-webkit-scrollbar-track{ background: transparent; }
+
+
+
+/* css for the login page */
+
+body{
+    margin:0;
+    padding:0px;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    background:var(--bg);
+    display:block;
+    align-items:stretch;
+    box-sizing:border-box;
+    gap:24px;
+    position: relative;
+}
+
+.header{
+    background-color: #7e0101;
+    text-align: center;
+    padding: 5px;
+    border: solid rgb(52, 1, 1);
+    margin-bottom: 10px;
+    flex-direction: row;
+    position: relative;
+}
+
+
+.login{
+    position: absolute;
+    top:130px;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px ;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+input{
+    margin-bottom: 15px;
+    padding:10px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+.loginButton{
+    display: inline-flex;
+    text-align: center;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.loginButton:hover{
+       background-color: rgb(160, 61, 43);
+
+}
+
+.loginPic{
+    position: absolute;
+    left: 350px;
+    top: 10px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 2px solid rgb(160, 61, 43);
+
+}
+
+
+/* THIS CSS IS FOR THE LOGIN AND OTHER PAGE NOT MAIN */
+
+
+/* NEED TO DO THE COMPUTER */
+
+@media screen and (min-width: 999px) {
+
+}
+
+
+
+/* NEED TO TABLET*/
+
+@media screen and (min-width:400px) and (max-width:998px) {
+    body{
+        padding-top: 0px;
+        margin:0;
+    }
+
+    .header{
+        font-size: 25px;
+        margin-bottom: 15px;
+        margin:0 0 15px 0;
+        text-align: center;
+    }
+
+    .login{
+        position: relative;
+        top:0;
+        left:0;
+        width: 80%;
+        margin:0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .loginPic{
+        position: relative;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+   
+
+
+}
+
+/* NEED TO DO PHONE*/
+
+@media screen and (max-width: 399px) {
+
+    
+
+    
+    
+}
