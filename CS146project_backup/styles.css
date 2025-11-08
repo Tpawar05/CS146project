@@ -299,12 +299,60 @@ input{
 
 }
 
-/* NEED TO DO PHONE*/
+/* NEED TO DO PHONE BUT IT DOESNT WORK IDK WHY*/
 
 @media screen and (max-width: 399px) {
+    /* NEED TO DO BLOCK BY BLOCK */
+    .header{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 
-    
 
-    
-    
+    .login{
+        position: relative;
+        width: 90%;
+        margin: 10px auto;
+        padding:20px;
+        border-radius: 10px;
+    }
+
+
+    .loginPic{
+        position: relative;
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin:0 auto 10px;
+        border: 50%;
+    }
+
+
+    label,input,.loginButton{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+
+    form{
+        display: block;
+        width: 100%;
+    }
+
+
+    .loginButton{
+        text-align: center;
+    }
+
+
+   
+
+
+   
+   
 }
+
+
+
