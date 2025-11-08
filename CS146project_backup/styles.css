@@ -97,6 +97,7 @@ body{
 .low-task{
     /*CHANGE "BACKGROUND-COLOUR" to fit task prio*/
     background-color: #5da10ada;
+    background-color: #ff000096;
     border-radius:10px;
     padding:18px 16px;
     box-shadow:0 1px 3px #ffffff;
@@ -225,6 +226,8 @@ body{
     margin: 0 auto;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -233,6 +236,7 @@ body{
 form{
     display: flex;
     flex-direction: column;
+    align-items: center; /* center inputs/buttons horizontally */
 }
 
 label{
@@ -246,6 +250,8 @@ input{
     padding:10px;
     border: 1px solid black;
     border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
 
 }
 
@@ -258,6 +264,7 @@ input{
     font-weight: bold;
     justify-content: center;
     text-decoration: none;
+    width: 100%;
 }
 
 .loginButton:hover{
