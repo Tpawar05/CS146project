@@ -66,7 +66,37 @@ body{
 /*change color for High prio tasks, make more for Mid and any others you may want*/
 .high-task{
     /*CHANGE "BACKGROUND-COLOUR" to fit task prio*/
-    background-color: #ffffff;
+    background-color: #fb0202e4;
+    border-radius:10px;
+    padding:18px 16px;
+    box-shadow:0 1px 3px #ffffff;
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:transform .12s ease,box-shadow .12s ease;
+    flex:0 0 auto; /* prevent tasks from stretching when sidebar grows */
+}
+
+.mid-task{
+    /*CHANGE "BACKGROUND-COLOUR" to fit task prio*/
+    background-color: #f8e219dc;
+    border-radius:10px;
+    padding:18px 16px;
+    box-shadow:0 1px 3px #ffffff;
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    transition:transform .12s ease,box-shadow .12s ease;
+    flex:0 0 auto; /* prevent tasks from stretching when sidebar grows */
+}
+
+.low-task{
+    /*CHANGE "BACKGROUND-COLOUR" to fit task prio*/
+    background-color: #5da10ada;
     border-radius:10px;
     padding:18px 16px;
     box-shadow:0 1px 3px #ffffff;
