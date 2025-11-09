@@ -195,6 +195,21 @@ body{
 
 
 
+.Customize{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #7e0101;
+    color:#0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.Customize:hover{
+    background-color: #570101;
+}
+
+
 /* css for the login page */
 
 body{
