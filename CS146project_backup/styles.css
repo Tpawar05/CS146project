@@ -212,40 +212,44 @@ body{
 .header{
     background-color: #7e0101;
     text-align: center;
-    padding: 5px;
-    border: solid rgb(52, 1, 1);
+    padding: 10px;
+    border-bottom: solid rgb(52, 1, 1);
     margin-bottom: 10px;
-    flex-direction: row;
-    position: relative;
+
 }
 
 
 .login{
-    position: absolute;
     top:130px;
     width: 300px;
     padding: 25px;
     border-radius: 10px ;
-    margin: 0 auto;
+    margin: 50px auto;
     left: 0;
     right: 0;
+    gap:60px;
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
 }
 
 form{
+    flex:1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* center inputs/buttons horizontally */
+    align-items: stretch;
+    font-size: 1.1rem;
+ 
 }
-
+.inputs{
+    text-align: left;
+}
 label{
     font-weight: bold;
     margin-bottom: 5px;
-
 }
 
 input{
@@ -259,7 +263,6 @@ input{
 }
 
 .loginButton{
-    display: inline-flex;
     text-align: center;
     background-color: tomato;
     padding: 10px;
@@ -267,7 +270,6 @@ input{
     font-weight: bold;
     justify-content: center;
     text-decoration: none;
-    width: 100%;
 }
 
 .loginButton:hover{
@@ -276,12 +278,14 @@ input{
 }
 
 .loginPic{
-    position: absolute;
-    left: 350px;
-    top: 10px;
-    width: 220px;
-    height: 220px;
+
+
+    width: 250px;
+    height: 250px;
+
+
     border-radius: 50%;
+
     border: 2px solid rgb(160, 61, 43);
 
 }
@@ -292,7 +296,26 @@ input{
 
 /* NEED TO DO THE COMPUTER */
 
+
+
 @media screen and (min-width: 999px) {
+    form{
+        font-size: 1.3rem;
+    }
+    input{
+        font-size: 1.2rem;
+    }
+    .loginPic{
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin:20px auto 0;
+    }
+    .loginButton{
+        font-size: 1.3rem;
+    }
+   
+
 
 }
 
@@ -318,8 +341,10 @@ input{
         top:0;
         left:0;
         width: 80%;
-        margin:0 auto;
+        margin:20px;
         display: flex;
+
+
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
@@ -328,11 +353,10 @@ input{
     }
 
     .loginPic{
-        position: relative;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        flex-shrink: 0;
+        width: 280px;
+        height: 280px;
+        display: block;
+        margin:20px auto 0;
     }
 
    
@@ -341,9 +365,9 @@ input{
 }
 
 /* NEED TO DO PHONE BUT IT DOESNT WORK IDK WHY*/
-
 @media screen and (max-width: 399px) {
     /* NEED TO DO BLOCK BY BLOCK */
+
     .header{
         display: block;
         width: 100%;
@@ -387,13 +411,13 @@ input{
         text-align: center;
     }
 
-
-   
-
-
-   
-   
+    label{
+        color:#48ccff;
+        
+    }
 }
+
+
 
 
 
