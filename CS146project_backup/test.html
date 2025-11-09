@@ -1,21 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="utf-8">
-    <title>Test Page</title>
+    <title>Customize Events</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
-
 <body>
 
-<a href="main.html" class="Back Button">Login</a> 
+<div class="header">
+    <h1>Customize Events</h1>
+</div>
 
-<a href="login.html" class="Log Out Button">Login</a> 
+<div class="customizePage">
+
+    <!-- Back Button -->
+    <a href="main.html" class="backButton">Back</a>
+
+    <!-- LONG-TERM EVENTS -->
+    <div class="eventSection">
+        <h2>Long-Term Events</h2>
+        <form>
+            <label>Date:</label><br>
+            <input type="date"><br>
+
+            <label>Description:</label><br>
+            <input type="text" placeholder="e.g. Internship application"><br>
+
+            <label>Importance Level:</label><br>
+            <select>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select><br>
+
+            <label>Color:</label><br>
+            <input type="color" value="#ff0000"><br>
+
+            <input type="submit" value="Add" class="addButton">
+        </form>
+    </div>
+
+    <!-- SHORT-TERM EVENTS -->
+    <div class="eventSection">
+        <h2>Short-Term Events</h2>
+        <form>
+            <label>Date:</label><br>
+            <input type="date"><br>
+
+            <label>Description:</label><br>
+            <input type="text" placeholder="e.g. Study for quiz"><br>
+
+            <label>Importance Level:</label><br>
+            <select>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select><br>
+
+            <label>Color:</label><br>
+            <input type="color" value="#f8e219"><br>
+
+            <input type="submit" value="Add" class="addButton">
+        </form>
+    </div>
+
+    <!-- REMOVE EVENTS -->
+    <div class="eventSection">
+        <h2>Remove Event</h2>
+        <form>
+            <label>Select Event:</label><br>
+            <select>
+                <option>Choose an event...</option>
+                <option>Pay invoices</option>
+                <option>Design review</option>
+                <option>Plan sprint</option>
+            </select><br>
+
+            <label>Importance Level:</label><br>
+            <select>
+                <option>Any</option>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select><br>
+
+            <label>Color:</label><br>
+            <input type="color" value="#5da10a"><br>
+
+            <input type="submit" value="Remove" class="removeButton">
+        </form>
+    </div>
+
+</div>
 
 </body>
-
 </html>
+
