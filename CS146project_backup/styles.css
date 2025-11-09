@@ -433,6 +433,126 @@ input{
 }
 
 
+/*Customize Page*/
+.customizePage {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.backButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #7e0101;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.backButton:hover {
+    background-color: #570101;
+}
+
+.eventSection {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.eventSection h2 {
+    margin-top: 0;
+}
+
+.eventSection form {
+    text-align: left;
+}
+
+.eventSection label {
+    font-weight: bold;
+}
+
+.eventSection input[type="text"],
+.eventSection input[type="date"],
+.eventSection input[type="color"],
+.eventSection select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.addButton,
+.removeButton {
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: rgb(160, 61, 43);
+}
+
+.removeButton {
+    background-color: #7e0101;
+}
+
+.removeButton:hover {
+    background-color: #570101;
+}
+
+/*PHONE VIEW*/
+@media screen and (max-width:399px) {
+    .customizePage {
+        width: 95%;
+        padding: 5px;
+    }
+    .eventSection {
+        padding: 10px;
+    }
+}
+
+/*TABLET VIEW*/
+@media screen and (min-width:400px) and (max-width:998px) {
+    .customizePage {
+        width: 90%;
+    }
+    .eventSection {
+        padding: 15px;
+    }
+}
+
+/*DESKTOP VIEW*/
+@media screen and (min-width:999px) {
+    .customizePage {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+    .eventSection {
+        padding: 20px;
+    }
+    .eventSection:nth-child(2) { 
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .eventSection:nth-child(3) { 
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
+
+
 
 
 
