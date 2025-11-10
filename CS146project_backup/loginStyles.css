@@ -121,7 +121,7 @@ input{
    
     
     body{
-        background-color: lightyellow;
+        background-color: #ffffff;
     }
 
 
@@ -168,9 +168,7 @@ input{
     }
 
     
-    body{
-        background-color: lightgreen;
-    }
+
    
 
 
@@ -231,7 +229,5 @@ input{
     }
 
 
-    body{
-        background-color: lightblue;
-    }
+
 }
