@@ -1,7 +1,6 @@
 document.getElementById("eventForm").addEventListener("submit",function(e){
 
     {
-e.preventDefault();
 console.log("FORM SUBMITTED,SHOULD SUBMIT DATA!!!!")
 
 const date=document.getElementById("eventDate").value;
@@ -28,7 +27,7 @@ eventDiv.textContent="Date:"+newEvent.date+"\nDescription:"+newEvent.description
 const container=document.getElementById("userEvents");
 container.appendChild(eventDiv)
 console.log("ADDED THE EVENT!")
-this.reset();
+//this.reset();
 
 }
     

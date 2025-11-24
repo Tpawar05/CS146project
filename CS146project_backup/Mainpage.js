@@ -129,6 +129,98 @@
     }
 
 
+    // ADDING THE RECIEVING DATA JS FOR THE TASKS!!!! BY MASROOR
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    console.log(urlParams)
+    const date=urlParams.get("date");
+    const description=urlParams.get("description");
+    const importance=urlParams.get("importance");
+    const color=urlParams.get("color");
+
+    //check if we get data
+
+    console.log("Main page check for data:",{date,description,importance,color});
+
+
+    
+
+
+    //we need to create a  task div
+
+    const taskList=document.getElementById("taskList");
+
+    const taskRecieved=document.createElement("div");
+
+    //every task has always some kinda task
+    taskRecieved.classList.add("task");
+
+     if(importance==="High"){
+        taskRecieved.classList.add("high-task")
+     }
+
+    else if(importance==="Medium"){
+        taskRecieved.classList.add("mid-task")
+    }else{
+        taskRecieved.classList.add("low-task")
+    }
+
+    //change the color
+
+    if(color){
+        taskRecieved.style.backgroundColor=color;
+    }
+
+    //big div container
+    const leftDiv=document.createElement("div");
+
+    //title div
+    const titleDiv=document.createElement("div");
+    titleDiv.classList.add("title");
+    titleDiv.textContent=description;
+
+    //Meta text or date
+    const metaDiv=document.createElement("div");
+    metaDiv.classList.add("meta");
+    metaDiv.textContent=date;
+
+    leftDiv.appendChild(titleDiv);
+    leftDiv.appendChild(metaDiv);
+
+    //the chev thing
+
+    const chev=document.createElement("div")
+    chev.classList.add("chev");
+    chev.textContent=">";
+
+
+    //adding all the things to task recieved container then to the actual task list!
+    taskRecieved.appendChild(leftDiv);
+    taskRecieved.appendChild(chev);
+    taskList.appendChild(taskRecieved)
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    //the html for a task example
+    // <div>
+    //     <div class="title">${description}</div>
+    //     <div class="meta">Time: ${description}</div>
+    // </div>
+    // <div class="chev">></div>
+
+    
 
     // initial render
     initTaskButtons();

@@ -22,26 +22,33 @@
 
     <div class="eventSection">
         <h2>Long-Term Events</h2>
-        <form id="eventForm">
+
+
+
+        <form id="eventForm" action="main.html" method="GET">
             <label>Date:</label><br>
-            <input type="date" id="eventDate"><br>
+            <input type="date" id="eventDate" name="date"><br>
 
             <label>Description:</label><br>
-            <input type="text" id="eventDescription"  placeholder="e.g. Internship application"><br>
+            <input type="text" id="eventDescription" name="description" placeholder="e.g. Internship application"><br>
 
             <label>Importance Level:</label><br>
-            <select id="eventImportance">
+            <select id="eventImportance" name="importance">
                 <option>High</option>
                 <option>Medium</option>
                 <option>Low</option>
             </select><br>
 
             <label>Color:</label><br>
-            <input type="color" id="eventColor" value="#ff0000"><br>
+            <input type="color" id="eventColor" name="color" value="#ff0000"><br>
 
             <input type="submit" value="Add" class="addButton">
         </form>
     </div>
+
+
+
+
 
     <!-- SHORT-TERM EVENTS -->
     <div class="eventSection">
