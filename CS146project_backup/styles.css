@@ -66,7 +66,7 @@ body{
     border-color: rgba(0,0,0,0.04);
 }
 .task.done{
-    background: #f3f4f6;
+    background: #f3f4f6 !important;
     color: #6b7280;
     box-shadow: none;
     border-color: rgba(0,0,0,0.02);
