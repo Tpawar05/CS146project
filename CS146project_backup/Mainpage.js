@@ -147,58 +147,58 @@
     
 
 
-    //we need to create a  task div
+    // //we need to create a  task div
 
-    const taskList=document.getElementById("taskList");
+    // const taskList=document.getElementById("taskList");
 
-    const taskRecieved=document.createElement("div");
+    // const taskRecieved=document.createElement("div");
 
-    //every task has always some kinda task
-    taskRecieved.classList.add("task");
+    // //every task has always some kinda task
+    // taskRecieved.classList.add("task");
 
-     if(importance==="High"){
-        taskRecieved.classList.add("high-task")
-     }
+    //  if(importance==="High"){
+    //     taskRecieved.classList.add("high-task")
+    //  }
 
-    else if(importance==="Medium"){
-        taskRecieved.classList.add("mid-task")
-    }else{
-        taskRecieved.classList.add("low-task")
-    }
+    // else if(importance==="Medium"){
+    //     taskRecieved.classList.add("mid-task")
+    // }else{
+    //     taskRecieved.classList.add("low-task")
+    // }
 
-    //change the color
+    // //change the color
 
-    if(color){
-        taskRecieved.style.backgroundColor=color;
-    }
+    // if(color){
+    //     taskRecieved.style.backgroundColor=color;
+    // }
 
-    //big div container
-    const leftDiv=document.createElement("div");
+    // //big div container
+    // const leftDiv=document.createElement("div");
 
-    //title div
-    const titleDiv=document.createElement("div");
-    titleDiv.classList.add("title");
-    titleDiv.textContent=description;
+    // //title div
+    // const titleDiv=document.createElement("div");
+    // titleDiv.classList.add("title");
+    // titleDiv.textContent=description;
 
-    //Meta text or date
-    const metaDiv=document.createElement("div");
-    metaDiv.classList.add("meta");
-    metaDiv.textContent=date;
+    // //Meta text or date
+    // const metaDiv=document.createElement("div");
+    // metaDiv.classList.add("meta");
+    // metaDiv.textContent=date;
 
-    leftDiv.appendChild(titleDiv);
-    leftDiv.appendChild(metaDiv);
+    // leftDiv.appendChild(titleDiv);
+    // leftDiv.appendChild(metaDiv);
 
-    //the chev thing
+    // //the chev thing
 
-    const chev=document.createElement("div")
-    chev.classList.add("chev");
-    chev.textContent=">";
+    // const chev=document.createElement("div")
+    // chev.classList.add("chev");
+    // chev.textContent=">";
 
 
-    //adding all the things to task recieved container then to the actual task list!
-    taskRecieved.appendChild(leftDiv);
-    taskRecieved.appendChild(chev);
-    taskList.appendChild(taskRecieved)
+    // //adding all the things to task recieved container then to the actual task list!
+    // taskRecieved.appendChild(leftDiv);
+    // taskRecieved.appendChild(chev);
+    // taskList.appendChild(taskRecieved)
 
 
 
@@ -224,5 +224,49 @@
 
     // initial render
     initTaskButtons();
+
+    //CODE TO LOAD DATA!
+
+    const savedEvents = JSON.parse(localStorage.getItem("userEvents")) || [];
+    savedEvents.forEach(evt => {
+        const taskList = document.getElementById("taskList");
+        const taskDiv = document.createElement("div");
+        taskDiv.classList.add("task");
+
+
+        if(evt.importance === "High") taskDiv.classList.add("high-task");
+        else if(evt.importance === "Medium") taskDiv.classList.add("mid-task");
+        else taskDiv.classList.add("low-task");
+
+
+        if(evt.color) taskDiv.style.backgroundColor = evt.color;
+
+        const left = document.createElement("div");
+        const title = document.createElement("div");
+
+        title.classList.add("title");
+        title.textContent = evt.description;
+
+        const meta = document.createElement("div");
+        meta.classList.add("meta");
+        meta.textContent = evt.date;
+
+        left.appendChild(title);
+        left.appendChild(meta);
+
+
+        const chev = document.createElement("div");
+        chev.classList.add("chev");
+        chev.textContent = ">";
+
+
+        taskDiv.appendChild(left);
+        taskDiv.appendChild(chev);
+        taskList.appendChild(taskDiv);
+        initTaskButtons();
+    });
+
+
+
     render();
 })();

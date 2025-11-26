@@ -13,6 +13,15 @@ const newEvent={
 };
 
 
+//LOCAL STORAGE CODE
+
+let events = JSON.parse(localStorage.getItem("userEvents")) || [];
+events.push(newEvent);
+localStorage.setItem("userEvents", JSON.stringify(events));
+
+
+
+
 console.log("THE NEW EVENT YOU MADE:",newEvent);
 
 const eventDiv=document.createElement("div");
