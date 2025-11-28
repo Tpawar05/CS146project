@@ -128,6 +128,50 @@
         });
     }
 
+    // sorts the task list by importance and date
+    function sortTaskList() {
+        const taskList = document.getElementById('taskList');
+        if (!taskList) return;
+
+        const tasks = Array.from(taskList.querySelectorAll('.task'));
+
+        const importanceOrder = {
+            'high-task': 0, // red
+            'mid-task': 1,  // yellow
+            'low-task': 2   // green
+        };
+
+        const sorted = tasks.slice().sort((a, b) => {
+            
+            const aClass = ['high-task', 'mid-task', 'low-task']
+                .find(c => a.classList.contains(c));
+            const bClass = ['high-task', 'mid-task', 'low-task']
+                .find(c => b.classList.contains(c));
+
+            const aImp = aClass ? importanceOrder[aClass] : 3;
+            const bImp = bClass ? importanceOrder[bClass] : 3;
+
+            
+            if (aImp !== bImp) return aImp - bImp;
+
+            
+            const aMeta = (a.querySelector('.meta')?.textContent || '').trim();
+            const bMeta = (b.querySelector('.meta')?.textContent || '').trim();
+
+            const aTime = Date.parse(aMeta);
+            const bTime = Date.parse(bMeta);
+
+            const aVal = isNaN(aTime) ? Infinity : aTime;
+            const bVal = isNaN(bTime) ? Infinity : bTime;
+
+            return aVal - bVal;
+        });
+
+        
+        sorted.forEach(task => taskList.appendChild(task));
+    }
+
+
 
     // ADDING THE RECIEVING DATA JS FOR THE TASKS!!!! BY MASROOR
 
@@ -267,6 +311,6 @@
     });
 
 
-
+    sortTaskList();
     render();
 })();

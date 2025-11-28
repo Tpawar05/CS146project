@@ -39,9 +39,6 @@
                 <option>Low</option>
             </select><br>
 
-            <label>Color:</label><br>
-            <input type="color" id="eventColor" name="color" value="#ff0000"><br>
-
             <input type="submit" value="Add" class="addButton">
         </form>
     </div>
@@ -67,9 +64,6 @@
                 <option>Low</option>
             </select><br>
 
-            <label>Color:</label><br>
-            <input type="color" value="#f8e219"><br>
-
             <input type="submit" value="Add" class="addButton">
         </form>
     </div>
@@ -77,37 +71,20 @@
     <!-- REMOVE EVENTS -->
     <div class="eventSection">
         <h2>Remove Event</h2>
-        <form>
+        <form id="removeEventForm">
             <label>Select Event:</label><br>
-            <select>
-                <option>Choose an event...</option>
-                <option>Pay invoices</option>
-                <option>Design review</option>
-                <option>Plan sprint</option>
+            <select id="removeEventSelect">
+
             </select><br>
 
-            <label>Importance Level:</label><br>
-            <select>
-                <option>Any</option>
-                <option>High</option>
-                <option>Medium</option>
-                <option>Low</option>
-            </select><br>
-
-            <label>Color:</label><br>
-            <input type="color" value="#5da10a"><br>
-
+            
             <input type="submit" value="Remove" class="removeButton">
         </form>
     </div>
 
 </div>
 
-<h2>EVENTS CREATED BY USER</h2>
-<div id="userEvents">
 
-
-</div>
 
 
 
